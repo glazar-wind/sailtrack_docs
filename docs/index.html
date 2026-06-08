@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +15,11 @@
       --accent: #2ea3f2;
       --border: #243140;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: var(--bg);
@@ -23,11 +28,13 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
+
     .wrap {
       max-width: 820px;
       margin: 0 auto;
       padding: 40px 22px 80px;
     }
+
     header {
       display: flex;
       align-items: center;
@@ -36,8 +43,17 @@
       gap: 16px;
       margin-bottom: 28px;
     }
-    .brand { font-size: 1.5rem; font-weight: 700; letter-spacing: .3px; }
-    .brand span { color: var(--accent); }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
     .lang-toggle button {
       background: transparent;
       color: var(--muted);
@@ -49,44 +65,78 @@
       font-weight: 600;
       transition: all .15s ease;
     }
-    .lang-toggle button + button { margin-left: 8px; }
+
+    .lang-toggle button+button {
+      margin-left: 8px;
+    }
+
     .lang-toggle button.active {
       background: var(--accent);
       color: #06121d;
       border-color: var(--accent);
     }
+
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 30px 28px;
     }
-    h1 { font-size: 1.7rem; margin: 0 0 6px; }
+
+    h1 {
+      font-size: 1.7rem;
+      margin: 0 0 6px;
+    }
+
     h2 {
       font-size: 1.15rem;
       margin: 30px 0 8px;
       padding-top: 18px;
       border-top: 1px solid var(--border);
     }
-    h2:first-of-type { border-top: none; padding-top: 0; }
-    .updated { color: var(--muted); font-size: .9rem; margin: 0 0 4px; }
-    p, li { color: var(--text); }
-    a { color: var(--accent); }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 6px; }
+
+    h2:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .updated {
+      color: var(--muted);
+      font-size: .9rem;
+      margin: 0 0 4px;
+    }
+
+    p,
+    li {
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
     .pill {
       display: inline-block;
-      background: rgba(46,163,242,.12);
+      background: rgba(46, 163, 242, .12);
       color: var(--accent);
-      border: 1px solid rgba(46,163,242,.3);
+      border: 1px solid rgba(46, 163, 242, .3);
       border-radius: 8px;
       padding: 2px 10px;
       font-size: .8rem;
       font-weight: 600;
       margin-bottom: 18px;
     }
+
     .note {
-      background: rgba(46,163,242,.07);
+      background: rgba(46, 163, 242, .07);
       border-left: 3px solid var(--accent);
       padding: 12px 16px;
       border-radius: 8px;
@@ -94,16 +144,24 @@
       color: var(--muted);
       font-size: .95rem;
     }
+
     footer {
       text-align: center;
       color: var(--muted);
       font-size: .85rem;
       margin-top: 36px;
     }
-    [data-lang] { display: none; }
-    [data-lang].visible { display: block; }
+
+    [data-lang] {
+      display: none;
+    }
+
+    [data-lang].visible {
+      display: block;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
@@ -116,7 +174,6 @@
 
     <!-- ─────────────────────────────  ESPAÑOL  ───────────────────────────── -->
     <div class="card" data-lang="es">
-      <span class="pill">App 100&nbsp;% open source · sin cuentas · sin anuncios</span>
       <h1>Política de Privacidad</h1>
       <p class="updated">Última actualización: 7 de junio de 2026</p>
 
@@ -140,40 +197,44 @@
 
       <h2>2. Qué datos trata la App</h2>
       <p><strong>Datos de ubicación (GPS).</strong> Cuando inicias una grabación, la App
-      registra tu posición, velocidad, rumbo, altitud y marcas de tiempo para trazar la
-      ruta y calcular estadísticas. Esta captura continúa con la pantalla apagada o la
-      app minimizada mientras la grabación está activa, mediante un servicio en primer
-      plano con una notificación permanente que te indica que el registro está en curso.</p>
+        registra tu posición, velocidad, rumbo, altitud y marcas de tiempo para trazar la
+        ruta y calcular estadísticas. Esta captura continúa con la pantalla apagada o la
+        app minimizada mientras la grabación está activa, mediante un servicio en primer
+        plano con una notificación permanente que te indica que el registro está en curso.</p>
       <p>Todos estos datos se guardan <strong>localmente</strong> en la base de datos del
-      dispositivo. No se transmiten a ningún servidor nuestro porque no existe.</p>
+        dispositivo. No se transmiten a ningún servidor nuestro porque no existe.</p>
 
       <h2>3. Permisos que solicita</h2>
       <ul>
         <li><strong>Ubicación (precisa y aproximada)</strong>: imprescindible para grabar tu ruta.</li>
-        <li><strong>Servicio en primer plano (tipo ubicación)</strong>: permite seguir grabando con la app en segundo plano.</li>
+        <li><strong>Servicio en primer plano (tipo ubicación)</strong>: permite seguir grabando con la app en segundo
+          plano.</li>
         <li><strong>Notificaciones</strong>: para mostrar la notificación persistente mientras grabas.</li>
-        <li><strong>Internet / estado de la red</strong>: para descargar los mapas y consultar la meteorología (ver sección 4).</li>
+        <li><strong>Internet / estado de la red</strong>: para descargar los mapas y consultar la meteorología (ver
+          sección 4).</li>
       </ul>
       <p>Puedes revocar estos permisos en cualquier momento desde los Ajustes de Android;
-      al hacerlo, las funciones que dependan de ellos dejarán de operar.</p>
+        al hacerlo, las funciones que dependan de ellos dejarán de operar.</p>
 
       <h2>4. Servicios de terceros</h2>
       <p>Para algunas funciones, la App realiza peticiones a servicios externos. No les
-      enviamos identificadores tuyos ni tu historial de rutas; solo los datos mínimos que
-      cada petición necesita:</p>
+        enviamos identificadores tuyos ni tu historial de rutas; solo los datos mínimos que
+        cada petición necesita:</p>
       <ul>
         <li>
           <strong>OpenStreetMap</strong> (mosaicos del mapa): al mostrar el mapa, tu
           dispositivo solicita las imágenes correspondientes a la zona visible. Esto
           implica enviar tu dirección IP y las coordenadas de la zona del mapa a sus
           servidores. Consulta su política:
-          <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">wiki.osmfoundation.org</a>.
+          <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank"
+            rel="noopener">wiki.osmfoundation.org</a>.
         </li>
         <li>
           <strong>Open-Meteo</strong> (meteorología): para mostrar el viento y las
           condiciones de tu sesión, la App envía las coordenadas del punto de inicio a
           <code>api.open-meteo.com</code>. No requiere clave ni cuenta. Consulta su
-          política: <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">open-meteo.com/en/terms</a>.
+          política: <a href="https://open-meteo.com/en/terms" target="_blank"
+            rel="noopener">open-meteo.com/en/terms</a>.
         </li>
       </ul>
       <div class="note">
@@ -184,9 +245,9 @@
 
       <h2>5. Compartir y exportar (acciones tuyas)</h2>
       <p>La App te permite exportar tus rutas como ficheros GPX o como imágenes, y crear
-      copias de seguridad de la base de datos. Estas acciones las inicias tú, y los
-      ficheros van a donde tú decidas (otra app, almacenamiento, etc.). Tú controlas a
-      quién se comparten.</p>
+        copias de seguridad de la base de datos. Estas acciones las inicias tú, y los
+        ficheros van a donde tú decidas (otra app, almacenamiento, etc.). Tú controlas a
+        quién se comparten.</p>
 
       <h2>6. Conservación y eliminación de datos</h2>
       <p>Tus datos permanecen en el dispositivo hasta que los borras. Puedes:</p>
@@ -198,21 +259,21 @@
 
       <h2>7. Menores</h2>
       <p>La App no está dirigida a menores de 13 años y no recopila a sabiendas datos de
-      menores. Todo el tratamiento ocurre localmente en el dispositivo del usuario.</p>
+        menores. Todo el tratamiento ocurre localmente en el dispositivo del usuario.</p>
 
       <h2>8. Cambios en esta política</h2>
       <p>Podemos actualizar esta política para reflejar cambios en la App o en la
-      normativa. Publicaremos la versión vigente en esta misma dirección y actualizaremos
-      la fecha de «Última actualización».</p>
+        normativa. Publicaremos la versión vigente en esta misma dirección y actualizaremos
+        la fecha de «Última actualización».</p>
 
       <h2>9. Contacto</h2>
       <p>Para cualquier consulta sobre privacidad, escribe a:
-      <a href="mailto:gonlafer@gmail.com">gonlafer@gmail.com</a>.</p>
+        <a href="mailto:gonlafer@gmail.com">gonlafer@gmail.com</a>.
+      </p>
     </div>
 
     <!-- ─────────────────────────────  ENGLISH  ───────────────────────────── -->
     <div class="card" data-lang="en">
-      <span class="pill">100% open source app · no accounts · no ads</span>
       <h1>Privacy Policy</h1>
       <p class="updated">Last updated: June 7, 2026</p>
 
@@ -235,33 +296,35 @@
 
       <h2>2. What data the App handles</h2>
       <p><strong>Location data (GPS).</strong> When you start a recording, the App logs your
-      position, speed, bearing, altitude and timestamps to draw the route and compute
-      statistics. Recording continues with the screen off or the app minimized while a
-      session is active, via a foreground service with a persistent notification telling
-      you that tracking is in progress.</p>
+        position, speed, bearing, altitude and timestamps to draw the route and compute
+        statistics. Recording continues with the screen off or the app minimized while a
+        session is active, via a foreground service with a persistent notification telling
+        you that tracking is in progress.</p>
       <p>All of this data is stored <strong>locally</strong> in the device database. It is
-      not transmitted to any server of ours, because none exists.</p>
+        not transmitted to any server of ours, because none exists.</p>
 
       <h2>3. Permissions requested</h2>
       <ul>
         <li><strong>Location (fine and coarse)</strong>: required to record your route.</li>
-        <li><strong>Foreground service (location type)</strong>: lets recording continue while the app is in the background.</li>
+        <li><strong>Foreground service (location type)</strong>: lets recording continue while the app is in the
+          background.</li>
         <li><strong>Notifications</strong>: to show the persistent notification while recording.</li>
         <li><strong>Internet / network state</strong>: to download maps and fetch weather (see section 4).</li>
       </ul>
       <p>You can revoke these permissions at any time in Android Settings; doing so will
-      disable the features that depend on them.</p>
+        disable the features that depend on them.</p>
 
       <h2>4. Third-party services</h2>
       <p>For some features, the App makes requests to external services. We do not send
-      them any identifiers or your route history — only the minimal data each request
-      needs:</p>
+        them any identifiers or your route history — only the minimal data each request
+        needs:</p>
       <ul>
         <li>
           <strong>OpenStreetMap</strong> (map tiles): to display the map, your device
           requests the images for the visible area. This involves sending your IP address
           and the map area coordinates to their servers. See their policy:
-          <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">wiki.osmfoundation.org</a>.
+          <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank"
+            rel="noopener">wiki.osmfoundation.org</a>.
         </li>
         <li>
           <strong>Open-Meteo</strong> (weather): to show wind and conditions for your
@@ -278,8 +341,8 @@
 
       <h2>5. Sharing and exporting (your actions)</h2>
       <p>The App lets you export your routes as GPX files or images, and back up the
-      database. You initiate these actions, and the files go wherever you choose (another
-      app, storage, etc.). You control who they are shared with.</p>
+        database. You initiate these actions, and the files go wherever you choose (another
+        app, storage, etc.). You control who they are shared with.</p>
 
       <h2>6. Data retention and deletion</h2>
       <p>Your data remains on the device until you delete it. You can:</p>
@@ -291,15 +354,16 @@
 
       <h2>7. Children</h2>
       <p>The App is not directed to children under 13 and does not knowingly collect data
-      from children. All processing happens locally on the user’s device.</p>
+        from children. All processing happens locally on the user’s device.</p>
 
       <h2>8. Changes to this policy</h2>
       <p>We may update this policy to reflect changes in the App or in regulations. We will
-      post the current version at this same address and update the “Last updated” date.</p>
+        post the current version at this same address and update the “Last updated” date.</p>
 
       <h2>9. Contact</h2>
       <p>For any privacy question, write to:
-      <a href="mailto:gonlafer@gmail.com">gonlafer@gmail.com</a>.</p>
+        <a href="mailto:gonlafer@gmail.com">gonlafer@gmail.com</a>.
+      </p>
     </div>
 
     <footer>
@@ -320,4 +384,5 @@
     setLang((navigator.language || 'es').toLowerCase().startsWith('en') ? 'en' : 'es');
   </script>
 </body>
+
 </html>
